@@ -1,0 +1,5 @@
+machine:
+  time:
+    disabled: false
+    servers:
+      - 172.29.50.100
