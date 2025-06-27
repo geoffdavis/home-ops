@@ -1,4 +1,5 @@
-kubernetes-mini01.yaml
-kubernetes-mini02.yaml
-kubernetes-mini03.yaml
+# Talos cluster configuration files
 talosconfig
+home-ops-mini01.yaml
+home-ops-mini02.yaml
+home-ops-mini03.yaml
