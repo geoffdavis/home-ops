@@ -23,7 +23,7 @@ nodes:
     ipAddress: "172.29.51.31"
     installDiskSelector:
       model: APPLE*
-    userVolumes:
+    userVolumes: &longhornUserVolume
       - name: longhorn-data
         provisioning:
           minSize: 500Gi
@@ -34,7 +34,7 @@ nodes:
           type: ext4
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/55b1dc45bfa8333d821de58d13266eee99d3000b45f76a02e3d9ce79d6a0c045
+    talosImageURL: &talimg factory.talos.dev/installer/55b1dc45bfa8333d821de58d13266eee99d3000b45f76a02e3d9ce79d6a0c045
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -47,18 +47,10 @@ nodes:
     ipAddress: "172.29.51.32"
     installDiskSelector:
       model: APPLE*
-    userVolumes:
-      - name: longhorn-data
-        provisioning:
-          minSize: 500Gi
-          grow: true
-          diskSelector:
-            match: disk.transport == "usb"
-        filesystem:
-          type: ext4
+    userVolumes: *longhornUserVolume
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/55b1dc45bfa8333d821de58d13266eee99d3000b45f76a02e3d9ce79d6a0c045
+    talosImageURL: *talimg
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -71,18 +63,10 @@ nodes:
     ipAddress: "172.29.51.33"
     installDiskSelector:
       model: APPLE*
-    userVolumes:
-      - name: longhorn-data
-        provisioning:
-          minSize: 500Gi
-          grow: true
-          diskSelector:
-            match: disk.transport == "usb"
-        filesystem:
-          type: ext4
+    userVolumes: *longhornUserVolume
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/55b1dc45bfa8333d821de58d13266eee99d3000b45f76a02e3d9ce79d6a0c045
+    talosImageURL: *talimg
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
