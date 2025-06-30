@@ -22,7 +22,6 @@ includes:
   bootstrap: .taskfiles/bootstrap
   sops: .taskfiles/sops
   talos: .taskfiles/talos
-  template: .taskfiles/template
 
 tasks:
 
